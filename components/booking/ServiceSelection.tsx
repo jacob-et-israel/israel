@@ -73,7 +73,7 @@ const ServiceSelection: React.FC<ServiceSelectionProps> = ({
   try {
     console.log('Tentative de récupération des services...');
     
-    const response = await fetch('/api/v1/services');
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/v1/services`);
     
     console.log('Status de la réponse:', response.status);
     console.log('Headers:', response.headers.get('content-type'));
